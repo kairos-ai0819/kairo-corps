@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "kairos, Inc. — Intervene at the kairos.",
+    "description": "kairos builds AI products that capture the decisive moments of your business.",
+    "ogAlt": "kairos, Inc."
+  },
+  "nav": {
+    "mission": "Mission",
+    "products": "Products",
+    "company": "Company",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "kairos, Inc.",
+    "title": "Intervene at the kairos.",
+    "subtitle": "kairos builds AI products that capture the decisive moments of your business.",
+    "cta": "Explore AgentSignal",
+    "ctaSecondary": "About us"
+  },
+  "mission": {
+    "label": "Mission",
+    "title": "Turn the moments that decide a sale into measurable revenue.",
+    "body1": "Visitors hesitate. They drop off. They give up on a purchase — and that single moment usually disappears before anyone sees it. As AI agents start operating sites on users' behalf, that blind spot is only growing.",
+    "body2": "kairos records, visualizes, and intervenes at those decisive moments. Instead of guessing what to change, your team sees exactly where outcomes are won or lost — and turns that insight into conversion, revenue, and a better user experience, repeatably."
+  },
+  "products": {
+    "label": "Products",
+    "title": "CVR optimization for the AI Agent era.",
+    "agentSignal": {
+      "name": "AgentSignal",
+      "tagline": "A CVR optimization platform for the AI Agent era",
+      "description": "Record and analyze the behavior of both users and AI agents, and intervene at the decisive moment.",
+      "link": "Learn more",
+      "features": {
+        "recording": {
+          "title": "Session Recording + Heatmaps",
+          "body": "Record visitor behavior and visualize the moment of drop-off."
+        },
+        "agentReplay": {
+          "title": "Agent Replay",
+          "body": "Record how AI agents interact with your site. Optimize UX for the Agent era."
+        },
+        "live": {
+          "title": "Live Co-browsing",
+          "body": "Live screen share with operator-initiated push for in-the-moment intervention."
+        },
+        "pushCV": {
+          "title": "Push CV Learning Loop",
+          "body": "An autonomous AI engine that delivers, measures, and learns to maximize conversions."
+        }
+      }
+    }
+  },
+  "company": {
+    "label": "Company",
+    "title": "Company Overview",
+    "items": {
+      "name": { "label": "Name", "value": "kairos, Inc." },
+      "founded": { "label": "Founded", "value": "2026" },
+      "address": { "label": "Address", "value": "Miyamasuzaka Bldg. 609, 2-19-15 Shibuya, Shibuya-ku, Tokyo, Japan" },
+      "ceo": { "label": "CEO", "value": "Shogo Mizushima" },
+      "business": { "label": "Business", "value": "Planning, development, and operation of AI-powered SaaS products" }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Get in touch",
+    "body": "For partnerships, careers, or press, feel free to reach out.",
+    "email": "info@kairos.co.jp",
+    "emailCta": "Send us an email"
+  },
+  "footer": {
+    "tagline": "Intervene at the kairos.",
+    "copyright": "© 2026 kairos, Inc."
+  }
+}

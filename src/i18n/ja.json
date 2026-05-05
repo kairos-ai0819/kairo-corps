@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "株式会社kairos — 決定的な瞬間に、介入する。",
+    "description": "kairos は AI を使って、ビジネスの『その瞬間』を捉えるプロダクトを作る会社です。",
+    "ogAlt": "株式会社kairos"
+  },
+  "nav": {
+    "mission": "Mission",
+    "products": "Products",
+    "company": "Company",
+    "contact": "Contact",
+    "language": "言語"
+  },
+  "hero": {
+    "eyebrow": "kairos, Inc.",
+    "title": "決定的な瞬間に、介入する。",
+    "subtitle": "kairos は AI を使って、ビジネスの『その瞬間』を捉えるプロダクトを作る会社です。",
+    "cta": "AgentSignal を見る",
+    "ctaSecondary": "会社概要"
+  },
+  "mission": {
+    "label": "Mission",
+    "title": "ユーザーの『その瞬間』を、ビジネスの結果に。",
+    "body1": "サイトを訪れたユーザーが迷い、離脱し、購入をあきらめる — その一瞬は、ほとんどの企業にとって見えないまま消えていく。AI Agent がユーザーの代理でサイトを操作する時代に入り、その不可視性はさらに加速している。",
+    "body2": "kairos は、決定的な瞬間を録画し、可視化し、その場で介入する仕組みを提供する。直感や経験ではなく、データと AI で『どこを変えれば成果が変わるか』を明らかにし、CVR を、売上を、ユーザー体験を、再現可能な形で前進させる。"
+  },
+  "products": {
+    "label": "Products",
+    "title": "AI Agent 時代の CVR 最適化。",
+    "agentSignal": {
+      "name": "AgentSignal",
+      "tagline": "AI Agent 時代の CVR 最適化プラットフォーム",
+      "description": "ユーザーと AI Agent、両方の行動を録画・分析し、決定的な瞬間に介入する。",
+      "link": "詳しくはこちら",
+      "features": {
+        "recording": {
+          "title": "Web 録画 + ヒートマップ",
+          "body": "サイト訪問者の行動を録画・可視化し、離脱の瞬間を特定する。"
+        },
+        "agentReplay": {
+          "title": "Agent Replay",
+          "body": "AI Agent がサイトをどう操作したかを録画。Agent 時代の UX を最適化。"
+        },
+        "live": {
+          "title": "リアルタイム接客",
+          "body": "ライブ画面共有 + オペレーター起点の push で、その場で介入する。"
+        },
+        "pushCV": {
+          "title": "Push 型 CV 学習ループ",
+          "body": "AI が自律的に配信し、結果を学習する CV 最適化エンジン。"
+        }
+      }
+    }
+  },
+  "company": {
+    "label": "Company",
+    "title": "会社概要",
+    "items": {
+      "name": { "label": "商号", "value": "株式会社kairos (kairos, Inc.)" },
+      "founded": { "label": "設立", "value": "2026年" },
+      "address": { "label": "所在地", "value": "東京都渋谷区渋谷2-19-15 宮益坂ビルディング 609" },
+      "ceo": { "label": "代表取締役", "value": "水島 翔吾" },
+      "business": { "label": "事業内容", "value": "AI を活用した SaaS プロダクトの企画・開発・運営" }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "お問い合わせ",
+    "body": "事業提携・採用・取材など、お気軽にご連絡ください。",
+    "email": "info@kairos.co.jp",
+    "emailCta": "メールで問い合わせる"
+  },
+  "footer": {
+    "tagline": "Intervene at the kairos.",
+    "copyright": "© 2026 kairos, Inc."
+  }
+}

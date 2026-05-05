@@ -1,0 +1,84 @@
+---
+import { createTranslator, type Locale } from "~/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = createTranslator(locale);
+
+const features = [
+  {
+    title: t("products.agentSignal.features.recording.title"),
+    body: t("products.agentSignal.features.recording.body"),
+  },
+  {
+    title: t("products.agentSignal.features.agentReplay.title"),
+    body: t("products.agentSignal.features.agentReplay.body"),
+  },
+  {
+    title: t("products.agentSignal.features.live.title"),
+    body: t("products.agentSignal.features.live.body"),
+  },
+  {
+    title: t("products.agentSignal.features.pushCV.title"),
+    body: t("products.agentSignal.features.pushCV.body"),
+  },
+];
+---
+
+<section id="products" class="border-b border-line/60 bg-surface/40">
+  <div class="container-x section-pad">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="eyebrow">{t("products.label")}</p>
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+        {t("products.title")}
+      </h2>
+    </div>
+
+    <div class="mt-16 rounded-2xl border border-line bg-paper p-8 md:p-12">
+      <div class="flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold tracking-tight text-ink md:text-3xl">
+            {t("products.agentSignal.name")}
+          </h3>
+          <p class="mt-2 text-base text-ink/70">{t("products.agentSignal.tagline")}</p>
+        </div>
+        <a
+          href="#products"
+          class="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-accent transition hover:text-ink md:mt-0"
+        >
+          {t("products.agentSignal.link")}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4"
+            aria-hidden="true"
+          >
+            <path d="M7 7h10v10"></path>
+            <path d="M7 17 17 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <p class="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-ink/75">
+        {t("products.agentSignal.description")}
+      </p>
+
+      <div class="mt-10 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2">
+        {features.map((feature) => (
+          <div class="bg-paper p-6">
+            <h4 class="text-base font-semibold text-ink">{feature.title}</h4>
+            <p class="mt-2 text-sm leading-relaxed text-ink/70">{feature.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

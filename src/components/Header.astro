@@ -1,0 +1,66 @@
+---
+import { createTranslator, localizedPath, type Locale } from "~/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = createTranslator(locale);
+
+const otherLocale: Locale = locale === "ja" ? "en" : "ja";
+const otherLocaleHref = localizedPath(otherLocale);
+const otherLocaleLabel = otherLocale.toUpperCase();
+
+const nav = [
+  { href: "#mission", label: t("nav.mission") },
+  { href: "#products", label: t("nav.products") },
+  { href: "#company", label: t("nav.company") },
+  { href: "#contact", label: t("nav.contact") },
+];
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-paper/10 bg-ink text-paper"
+>
+  <div class="container-x flex h-16 items-center justify-between">
+    <a href={localizedPath(locale)} class="flex items-baseline gap-2 text-paper">
+      <span class="text-lg font-semibold tracking-tight lowercase">kairos</span>
+      <span class="hidden text-xs text-paper/50 sm:inline">, Inc.</span>
+    </a>
+
+    <nav class="hidden items-center gap-8 md:flex">
+      {nav.map((item) => (
+        <a href={item.href} class="text-sm text-paper/70 transition hover:text-paper">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={otherLocaleHref}
+        aria-label={t("nav.language")}
+        class="inline-flex items-center gap-1.5 rounded-full border border-paper/20 px-3 py-1.5 text-xs font-medium text-paper/80 transition hover:border-paper hover:text-paper"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-3.5 w-3.5"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M3 12h18"></path>
+          <path d="M12 3a14 14 0 0 1 0 18"></path>
+          <path d="M12 3a14 14 0 0 0 0 18"></path>
+        </svg>
+        <span>{otherLocaleLabel}</span>
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,41 @@
+---
+import { createTranslator, type Locale } from "~/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = createTranslator(locale);
+
+const items = [
+  { label: t("company.items.name.label"), value: t("company.items.name.value") },
+  { label: t("company.items.founded.label"), value: t("company.items.founded.value") },
+  { label: t("company.items.address.label"), value: t("company.items.address.value") },
+  { label: t("company.items.ceo.label"), value: t("company.items.ceo.value") },
+  { label: t("company.items.business.label"), value: t("company.items.business.value") },
+];
+---
+
+<section id="company" class="border-b border-line/60">
+  <div class="container-x section-pad">
+    <div class="grid gap-16 md:grid-cols-12 md:gap-12">
+      <div class="md:col-span-4">
+        <p class="eyebrow">{t("company.label")}</p>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+          {t("company.title")}
+        </h2>
+      </div>
+      <div class="md:col-span-8">
+        <dl class="divide-y divide-line border-y border-line">
+          {items.map((item) => (
+            <div class="grid grid-cols-1 gap-2 py-5 md:grid-cols-12 md:gap-6">
+              <dt class="text-sm font-medium text-muted md:col-span-3">{item.label}</dt>
+              <dd class="text-base text-ink md:col-span-9">{item.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

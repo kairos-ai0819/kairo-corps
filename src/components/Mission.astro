@@ -1,0 +1,27 @@
+---
+import { createTranslator, type Locale } from "~/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = createTranslator(locale);
+---
+
+<section id="mission" class="border-b border-line/60">
+  <div class="container-x section-pad">
+    <div class="grid gap-16 md:grid-cols-12 md:gap-12">
+      <div class="md:col-span-4">
+        <p class="eyebrow">{t("mission.label")}</p>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+          {t("mission.title")}
+        </h2>
+      </div>
+      <div class="space-y-6 text-lg leading-relaxed text-ink/75 md:col-span-8 md:text-xl">
+        <p class="text-pretty">{t("mission.body1")}</p>
+        <p class="text-pretty">{t("mission.body2")}</p>
+      </div>
+    </div>
+  </div>
+</section>

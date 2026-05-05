@@ -1,0 +1,50 @@
+---
+import { createTranslator, type Locale } from "~/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = createTranslator(locale);
+const email = t("contact.email");
+---
+
+<section id="contact" class="bg-ink text-paper">
+  <div class="container-x section-pad">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="eyebrow !text-paper/60">{t("contact.label")}</p>
+      <h2 class="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
+        {t("contact.title")}
+      </h2>
+      <p class="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-paper/70">
+        {t("contact.body")}
+      </p>
+      <div class="mt-10 flex flex-col items-center gap-4">
+        <a
+          href={`mailto:${email}`}
+          class="inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-sm font-medium text-ink transition hover:bg-paper/90"
+        >
+          {t("contact.emailCta")}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href={`mailto:${email}`} class="font-mono text-sm text-paper/70 hover:text-paper">
+          {email}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

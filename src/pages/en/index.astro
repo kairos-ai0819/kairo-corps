@@ -1,0 +1,18 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Hero from "~/components/Hero.astro";
+import Mission from "~/components/Mission.astro";
+import Products from "~/components/Products.astro";
+import Company from "~/components/Company.astro";
+import Contact from "~/components/Contact.astro";
+
+const locale = "en" as const;
+---
+
+<BaseLayout locale={locale}>
+  <Hero locale={locale} />
+  <Mission locale={locale} />
+  <Products locale={locale} />
+  <Company locale={locale} />
+  <Contact locale={locale} />
+</BaseLayout>

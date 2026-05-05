@@ -1,0 +1,17 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: kairos-corp-web
+    ports:
+      - "3013:4321"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
+    command: pnpm dev --host 0.0.0.0
+    tty: true
+    stdin_open: true
