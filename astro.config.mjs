@@ -2,8 +2,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
+import cloudflare from "@astrojs/cloudflare";
+
 export default defineConfig({
   site: 'https://kairos.co.jp',
+
   i18n: {
     defaultLocale: 'ja',
     locales: ['ja', 'en'],
@@ -11,6 +14,7 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+
   vite: {
     plugins: [tailwindcss()],
     server: {
@@ -25,4 +29,6 @@ export default defineConfig({
       },
     },
   },
+
+  adapter: cloudflare()
 });
