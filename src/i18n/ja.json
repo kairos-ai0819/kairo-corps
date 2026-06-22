@@ -68,7 +68,15 @@
     "title": "お問い合わせ",
     "body": "事業提携・採用・取材など、お気軽にご連絡ください。",
     "email": "info@kairos.co.jp",
-    "emailCta": "メールで問い合わせる"
+    "emailCta": "メールで問い合わせる",
+    "formName": "お名前",
+    "formNamePlaceholder": "山田 太郎",
+    "formEmail": "メールアドレス",
+    "formEmailPlaceholder": "you@example.com",
+    "formMessage": "お問い合わせ内容",
+    "formMessagePlaceholder": "ご相談内容をご記入ください",
+    "formSubmit": "送信する",
+    "formSubject": "kairos.co.jp お問い合わせ"
   },
   "footer": {
     "tagline": "Intervene at the kairos.",

@@ -7,7 +7,10 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = createTranslator(locale);
-const email = t("contact.email");
+
+// FormSubmit.co がフォーム送信を受け取り、このアドレスにメール転送する。
+// 初回送信時に確認メールが届くので、リンクを押して有効化する。
+const formAction = "https://formsubmit.co/mizushima@kairos-corp.net";
 ---
 
 <section id="contact" class="bg-ink text-paper">
@@ -20,12 +23,65 @@ const email = t("contact.email");
       <p class="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-paper/70">
         {t("contact.body")}
       </p>
-      <div class="mt-10 flex flex-col items-center gap-4">
-        <a
-          href={`mailto:${email}`}
+      <form
+        action={formAction}
+        method="POST"
+        class="mx-auto mt-10 max-w-xl space-y-5 text-left"
+      >
+        {/* FormSubmit 設定 */}
+        <input type="hidden" name="_subject" value={t("contact.formSubject")} />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="true" />
+        {/* スパム対策のハニーポット（人間には見えない） */}
+        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <div>
+          <label for="name" class="mb-2 block text-sm font-medium text-paper/80">
+            {t("contact.formName")}
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder={t("contact.formNamePlaceholder")}
+            class="w-full rounded-lg border border-paper/20 bg-paper/5 px-4 py-3 text-sm text-paper placeholder:text-paper/40 focus:border-paper/50 focus:outline-none focus:ring-1 focus:ring-paper/50"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="mb-2 block text-sm font-medium text-paper/80">
+            {t("contact.formEmail")}
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder={t("contact.formEmailPlaceholder")}
+            class="w-full rounded-lg border border-paper/20 bg-paper/5 px-4 py-3 text-sm text-paper placeholder:text-paper/40 focus:border-paper/50 focus:outline-none focus:ring-1 focus:ring-paper/50"
+          />
+        </div>
+
+        <div>
+          <label for="message" class="mb-2 block text-sm font-medium text-paper/80">
+            {t("contact.formMessage")}
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows="5"
+            placeholder={t("contact.formMessagePlaceholder")}
+            class="w-full rounded-lg border border-paper/20 bg-paper/5 px-4 py-3 text-sm text-paper placeholder:text-paper/40 focus:border-paper/50 focus:outline-none focus:ring-1 focus:ring-paper/50"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
           class="inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-sm font-medium text-ink transition hover:bg-paper/90"
         >
-          {t("contact.emailCta")}
+          {t("contact.formSubmit")}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -40,11 +96,8 @@ const email = t("contact.email");
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
           </svg>
-        </a>
-        <a href={`mailto:${email}`} class="font-mono text-sm text-paper/70 hover:text-paper">
-          {email}
-        </a>
-      </div>
+        </button>
+      </form>
     </div>
   </div>
 </section>

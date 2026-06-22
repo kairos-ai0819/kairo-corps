@@ -68,7 +68,15 @@
     "title": "Get in touch",
     "body": "For partnerships, careers, or press, feel free to reach out.",
     "email": "info@kairos.co.jp",
-    "emailCta": "Send us an email"
+    "emailCta": "Send us an email",
+    "formName": "Name",
+    "formNamePlaceholder": "Taro Yamada",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "you@example.com",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Tell us how we can help",
+    "formSubmit": "Send",
+    "formSubject": "New inquiry from kairos.co.jp"
   },
   "footer": {
     "tagline": "Intervene at the kairos.",
